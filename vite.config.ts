@@ -5,17 +5,22 @@ import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 
 const config = defineConfig({
-    base: '/teralab30thanniversary/',
-    plugins: [
-          viteTsConfigPaths({
-                  projects: ['./tsconfig.json'],
-          }),
-          tailwindcss(),
-          tanstackStart({
-                  target: 'static',
-          }),
-          viteReact(),
-        ],
+  base: '/teralab30thanniversary/',
+  plugins: [
+    viteTsConfigPaths({
+      projects: ['./tsconfig.json'],
+    }),
+    tailwindcss(),
+    tanstackStart({
+      target: 'static',
+      prerender: {
+        enabled: true,
+        routes: ['/'],
+        crawlLinks: true,
+      },
+    }),
+    viteReact(),
+  ],
 })
 
 export default config
