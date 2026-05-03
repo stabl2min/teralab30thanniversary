@@ -105,7 +105,7 @@ function Invitation() {
         <section className="section" id="map">
           <div className="wrap map-grid">
             <div className="map-card">
-              <img src="/map.png" alt="TERALAB 30주년 행사 주차 및 등록 장소 안내 지도" />
+              <img src="/teralab30thanniversary/map.png" alt="TERALAB 30주년 행사 주차 및 등록 장소 안내 지도" />
             </div>
             <div>
               <h2 className="section-title">등록·주차 안내</h2>
