@@ -34,16 +34,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: List dist output
-        run: ls -la dist/ && ls -la dist/client/ 2>/dev/null || echo "No dist/client folder"
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/client
 
   deploy:
     environment:
